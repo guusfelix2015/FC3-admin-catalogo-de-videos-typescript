@@ -2,6 +2,11 @@ import { Uuid } from "../../../shared/domain/value-objects/uuid.vo";
 import { Category } from "../../category.entity";
 
 describe("Category Unit Tests", () => {
+  let validateSpy: any;
+  beforeEach(() => {
+    validateSpy = jest.spyOn(Category, "validate");
+  });
+
   describe("Constructor", () => {
     describe("without optional fields", () => {
       test("should create a Category with default values", () => {
