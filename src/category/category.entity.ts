@@ -1,3 +1,4 @@
+import ValidatorRules from "../shared/domain/validators/validator-rules";
 import { Uuid } from "../shared/domain/value-objects/uuid.vo";
 
 export type CategoryConstructorProps = {
@@ -35,6 +36,7 @@ export class Category {
   }
 
   changeName(name: string): void {
+
     this.name = name;
   }
 
